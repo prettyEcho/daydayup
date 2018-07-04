@@ -1,0 +1,17 @@
+{
+  "name": "hello-sequelize",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "DEBUG=sequelize node app.js",
+    "start": "DEBUG=opertor node opertor.js"
+  },
+  "author": "echo",
+  "license": "ISC",
+  "dependencies": {
+    "debug": "^3.1.0",
+    "mysql2": "^1.5.2",
+    "sequelize": "^4.35.2"
+  }
+}

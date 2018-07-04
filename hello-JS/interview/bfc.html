@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container{
+            width: 100%;
+            height: 300px;
+            /* font-size: 0;  */           
+        }
+        .left{
+            float: left;
+            /* display: inline-block; */
+            /* width: 200px;  */
+            /* vertical-align: top; */
+            box-sizing: content-box;
+            margin-right: 20px;
+        }
+        .right{
+            /* margin-left: 200px; */
+            /* display: inline-block; */
+            /* vertical-align: top; */
+            /* width: calc(100% - 200px); */
+            box-sizing: content-box;   
+            overflow: auto;         
+            background-color: mediumvioletred;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <img class="left" src="./image/us.jpeg">
+    <div class="right">
+        <span>1</span>
+        <span>2</span>
+    </div>
+</div>
+</body>
+</html>

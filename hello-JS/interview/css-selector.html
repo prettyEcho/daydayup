@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{height: 1000px}
+        .box{
+            margin-top: 100px;
+        }
+        .child{
+            position: sticky;
+            position: -webkit-sticky;
+            top: 90px;
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <div class="box">
+        <div class="child"></div>
+    </div>
+</div>
+<span style="width: 200px; height: 200px; background: black; position: relative"></span>
+    <script>
+          window.onscroll = function(){
+              console.log(document.querySelector('.child').offsetTop);
+          }
+    </script>
+
+</body>
+</html>

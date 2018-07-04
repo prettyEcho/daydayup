@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="parent">
+    <div class="child1" data-id="id1" name="echo">我是孩子1</div>
+</div>
+<div class="child2">我是孩子2</div>
+<script>
+    let parent = document.querySelector('.parent'),
+        child1 = document.querySelector('.child1'),
+        child2 = document.querySelector('.child2');
+    console.log(document.querySelector('.child1').parentNode);
+    console.log(document.querySelector('.parent').children);
+    //parent.appendChild(child2);
+    //parent.replaceChild(child2,child1);
+    //parent.insertBefore(child2, child1);
+    //console.log(child1.attributes);
+    //console.log(child1.getAttribute('name'));
+    //console.log(child1.hasAttribute('name'));
+    //console.log(child1.hasAttributes());
+    child1.setAttribute('name','cherry');
+    //console.log(child2.outerHTML);
+    console.log(child2.previousSibling);
+</script>
+</body>
+</html>

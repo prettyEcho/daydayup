@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #contain {
+      margin: 50px;
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+    }
+
+    #drag {
+      width: 100px;
+      height: 100px;
+      background-color: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="contain">垃圾箱</div>
+  <div id="drag" draggable="true">托我</div>
+  <script>
+    var oContain = document.querySelector('#contain')
+    var oDrag = document.querySelector('#drag')
+
+    // 作用在拖拽物上
+    oDrag.addEventListener('dragstart', (e) => {
+      e.dataTransfer.effectAllowed = 'copy'
+      e.dataTransfer.setData('test', e.target.id)
+      console.log(e.dataTransfer)
+      console.log(e.target);
+    }, false)
+
+    oDrag.addEventListener('dragend', (e) => {
+      console.log('dragend', e.currentTarget)
+    }, false)
+
+    // 作用在垃圾箱上
+    oContain.addEventListener('dragenter', (e) => {
+      console.log('dragenter', e.currentTarget)
+    }, false)
+
+    oContain.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      // console.log('drageover', e.currentTarget)
+    }, false)
+
+    oContain.addEventListener('drop', (e) => {
+      const id = e.dataTransfer.getData('test')
+      e.target.appendChild(document.getElementById(id))
+      console.log('drop', e.currentTarget)
+    }, false)
+  </script>
+</body>
+
+</html>

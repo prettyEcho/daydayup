@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        {{pCount}}
+        <my-count @echo="padd"></my-count>
+        <com-b></com-b>
+    </div>
+    <script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+    <!-- <script src="./component1.js"></script> -->
+    <script>
+        var comA = {
+            template: `
+                <div @click="add">
+                    {{count}}
+                </div>
+            `,
+            data() {
+                return {
+                    count: 0
+                }
+            },
+            methods: {
+                add() {
+                    this.count++;
+                    this.$emit('echo', this.count);
+                }
+            }
+        };
+        var comB = {
+            template:  `<div>comB</div>`
+        }
+        new Vue({
+            el: '#app',
+            data: {
+                pCount: 0
+            },
+            methods: {
+                padd(count) {
+                    console.log(count);
+                    this.pCount = count;
+                }
+            },
+            components: {
+                'my-count': comA,
+                comB
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="show"></div>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<script>
+    let oDiv = document.querySelector('#show'),
+        oUl = document.querySelector('ul'),
+        oLi = document.querySelectorAll('ul li');
+
+   /* 方法一
+
+   oUl.addEventListener('click',function(e){
+        let target = e.target || e.srcElement;
+        if(target.nodeName && target.nodeName.toLowerCase() === "li" ){
+            oDiv.innerHTML = [].indexOf.call(oLi, target);
+        }
+    },false);*/
+
+    /*方法二*/
+/*
+    for(let i = 0; i < oLi.length; i++){
+        oLi[i].addEventListener('click',function(){
+            oDiv.innerHTML = i;
+        },false);
+    }*/
+
+    /*方法三*/
+
+    for(var i = 0; i < oLi.length; i++){
+        (function(i){
+            oLi[i].addEventListener('click',function(){
+                oDiv.innerHTML = i;
+            },false)
+        })(i);
+    }
+</script>
+</body>
+</html>

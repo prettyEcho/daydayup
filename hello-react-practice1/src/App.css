@@ -1,0 +1,22 @@
+.app {
+  background-color: #fff;
+}
+
+.goods {
+  margin: 100px auto 20px;
+  width: 300px;
+}
+
+.goods-search {
+  margin: 10px;
+}
+
+.goods-search-input {
+  display: inline-block;
+  width: 80%;
+}
+
+.goods-showList {
+  margin: 0 auto;
+  width: 300px;
+}

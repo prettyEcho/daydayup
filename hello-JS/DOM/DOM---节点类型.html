@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="test">zhang</div>
+<script>
+    let oDiv = document.querySelector("#test"),
+        oTxt = oDiv.firstChild,
+        oBody = document.querySelector("body");
+    if(oDiv.nodeType == Node.ELEMENT_NODE){
+        alert(`nodeName:${oDiv.nodeName} ==== nodeValue: ${oDiv.nodeValue}`);
+        console.log(oDiv.childNodes);
+    }
+    let oT = oBody.childNodes[0];
+    console.log(oT.nodeName);
+    console.log(oT.nodeValue);
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "hot-require",
+  "version": "1.0.0",
+  "description": "hot update module in Node.js",
+  "main": "hot-require.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hot"
+  ],
+  "author": "echo",
+  "license": "ISC",
+  "dependencies": {
+    "filewatcher": "^3.0.1"
+  }
+}

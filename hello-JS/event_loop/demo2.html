@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log('script1');
+
+        setTimeout(function() {
+            console.log('setTimeout1');
+            new Promise(function(res, rej){
+                console.log('set_promiss1');
+                res();
+            }).then(res => {
+                console.log('set_resolve1');
+            })
+        }, 0);
+        
+        new Promise(function(res, rej){
+                console.log('promiss1');
+                res();
+            }).then(res => {
+                console.log('resolve1');
+            })
+    </script>
+    <script>
+        console.log('script2');
+
+        setTimeout(function() {
+            console.log('setTimeout2');
+            new Promise(function(res, rej){
+                console.log('set_promiss2');
+                res();
+            }).then(res => {
+                console.log('set_resolve2');
+            })
+        }, 0);
+        
+        new Promise(function(res, rej){
+                console.log('promiss2');
+                res();
+            }).then(res => {
+                console.log('resolve2');
+            })
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./myLoaded.js"></script>
+    <script>
+        domReady(function(){
+            let oDiv = document.querySelector("#test");
+            oDiv.innerHTML = "HTML已经解析完";
+        });
+    </script>
+</head>
+<body>
+<div id="test"></div>
+</body>
+</html>

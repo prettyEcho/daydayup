@@ -1,0 +1,64 @@
+.comment {
+  padding: 50px;
+  margin: 0 auto;
+  width: 500px;
+  border: 1px solid #ccc;
+}
+
+.comment-comment-wrap {
+  padding: 30px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+}
+
+.comment-comment-section {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0;
+}
+
+.comment-comment-username {
+  flex: 1
+}
+
+.comment-comment-userinput {
+  flex: 4;
+  border: 1px solid #ccc;
+}
+
+.comment-comment-release {
+  padding: 5px;
+  width: 80px;
+  color: #fff;
+  border-radius: 4px;
+  background-color: blue;
+}
+
+ul {
+  padding: 0;
+}
+
+.comment-show-delete {
+  display: none;
+  float: right;
+  color: blue;
+  font-size: 12px;
+}
+
+.comment-show-delete:hover {
+  cursor: pointer;
+}
+
+.comment-show-item {
+  list-style: none;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+}
+
+.comment-show-item:hover .comment-show-delete {
+  display: block;
+}
+
+.comment-show-title {
+  color: blue
+}

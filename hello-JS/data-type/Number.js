@@ -1,0 +1,11 @@
+console.log( Number({}) );
+console.log( Number(null) );
+console.log( Number(undefined) );
+console.log( Number('123') );
+console.log( Number('undefined23') );
+console.log( Number('21.2undefined') );
+console.log( Number('undefined') );
+console.log( Number('') );
+console.log( parseInt('a12') );
+console.log( parseInt(' 12a') );
+console.log( parseFloat(' 12a') );

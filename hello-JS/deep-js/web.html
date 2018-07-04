@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .nav{
+            margin-top: 200px;
+            padding: 0 200px;
+            background-color: #2997D9;
+        }
+        .nav li{
+            padding: 10px 0;
+            list-style: none;
+            display: inline-block;
+            width: 100px;
+            text-align: center;
+            color: #ccc;
+        }
+        .nav li:hover{
+            background-color: rgb(230, 210, 35);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li>首页</li>
+        <li>首页</li>
+        <li>首页</li>
+        <li>首页</li>
+        <li>首页</li>
+    </ul>
+    <script>
+        var oLis = document.querySelectorAll('li');
+
+        for(let i = 0; i < oLis.length; i++ ) {
+
+            oLis[i].onclick = (function(t) {
+                return function() {
+                    console.log( t );
+                    console.log( i );
+                }
+            })(i);
+        }
+
+        
+    </script>
+</body>
+</html>

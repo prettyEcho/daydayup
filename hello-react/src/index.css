@@ -1,0 +1,16 @@
+.header {
+  border-bottom: 1px solid #000;
+}
+
+.text {
+  padding: 30px;
+  text-align: center;
+  border-bottom: 1px dotted #000;
+}
+
+.wrap {
+  padding: 50px;
+  margin: 0 auto;
+  width: 500px;
+  border: 1px solid #ccc;
+}

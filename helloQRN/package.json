@@ -1,0 +1,19 @@
+{
+  "name": "helloQRN",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "bundle": "node node_modules/@qnpm/QRNPackager/cli.js bundle -c -b biz"
+  },
+  "dependencies": {
+    "qunar-react-native": "git+ssh://git@gitlab.corp.qunar.com:qrn/qrn-js.git#v3.5.0"
+  },
+  "devDependencies": {
+    "commander": "^2.9.0",
+    "chalk": "^1.1.1"
+  },
+  "optionalDependencies": {
+    "fsevents": "^1.1.1"
+  }
+}

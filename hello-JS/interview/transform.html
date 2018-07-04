@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .test{
+            transform-style: preserve-3d;
+            perspective: 200px;
+        }
+        .child{
+            width: 100px;
+            height: 100px;
+            background: #000;
+            color: #fff;
+            transform: rotateZ(20deg);
+            animation: name 2s infinite;
+
+        }
+        @keyframes name{
+
+        }
+    </style>
+</head>
+<body>
+<div class="test">
+    <div class="child"></div>
+</div>
+</body>
+</html>
